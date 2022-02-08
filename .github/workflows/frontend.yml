@@ -31,7 +31,7 @@ jobs:
         uses: actions/download-artifact@v2
         with:
           name: my-download
-          path: my-nice-download
+          path: src/
       # print app.js on console
       - name: print app.js
         run: |
