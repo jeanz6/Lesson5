@@ -27,11 +27,14 @@ jobs:
         uses: actions/checkout@v2
         
       # load repo into workingfolder 
-      - name: load repo into workingfolder
+      - name: download to working dir
         uses: actions/download-artifact@v2
         with:
-          name: my-download
-          path: src/
+          name: my-artifact
+      - name: Display structure of downloaded files
+        run: ls -R
+          
+      
       # print app.js on console
       - name: print app.js
         run: |
